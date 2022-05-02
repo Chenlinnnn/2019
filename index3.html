@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/css">
+  
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 320px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+input[type="number"] {
+  min-width: 50px;
+}
+
+</style>
+</head>
+<body>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+     ▲圖為亞洲地區來台旅客國籍比例，其中由日韓兩個為大宗。
+
+     
+     根據入境統計數據顯示，2019年全年來台旅客約1184萬人次，創下歷史新高，比2018年的1107萬人次，成長7%；其中陸客271萬人次，也較前年的270萬人次微幅成長0.5%。另外，日本旅客來台也首度突破200萬人次大關。
+     交通部觀光局指出，綜觀過去一年，整體來台旅客約成長77萬人次，全年來台旅客達1184萬人次，能創下歷史新高實屬不易。去年中起陸客限縮來台，而日本市場在去年12月9日首度突破200萬人次大關，日韓市場同步再創新高，成長率分別約為1至2成，新南向18國成長幅度約6%。交通部觀光局表示，在世界各國競爭激烈的觀光市場環境，台灣穩定爭取更多樣客源，朝「增加國際行銷管道、加強重要潛力客源設點深耕」及「擴大跨國跨域跨業合作、提升台灣觀光國際競爭力」兩大方向積極布局。
+     交通部觀光局說明，擴大跨國跨域跨業合作方面，在台日、台韓觀光雙邊合作會議結合旅遊展銷會，加速觀光經驗交流也加強彼此送客能量；進行資源觀光化及宣傳國際化，提供國際旅客更多元來台旅遊的選擇。
+     </p>
+</figure>
+<script type="text/javascript">
+  Highcharts.chart('container', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+  title: {
+    text: '2019年來台旅客國籍-亞洲地區'
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  accessibility: {
+    point: {
+      valueSuffix: '%'
+    }
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      dataLabels: {
+        enabled: true,
+        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+      }
+    }
+  },
+series: [{
+    name: '國家',
+    colorByPoint: true,
+    data: [{
+      name: '日本',
+      y: 2162426,
+      sliced: true,
+      selected: true
+    }, {
+      name: '韓國',
+      y: 1245144
+    }, {
+      name: '印度',
+      y: 48575
+    }, {
+      name: '中東',
+      y: 22054
+    }, {
+      name: '馬來西亞',
+      y: 560099
+    }, {
+      name: '新加坡',
+      y: 421121
+    }, {
+      name: '印尼',
+      y: 234568
+    }, {
+      name: '菲律賓',
+      y: 510966
+    }, {
+      name: '泰國',
+      y: 410385
+    },{
+      name: '越南',
+      y: 404570
+    },{
+      name: '亞洲其他地區',
+      y: 12505
+    },{
+      name: '東南亞其他地區',
+      y: 36013
+    }]
+  }]
+});
+</script>
+  
+</script>
+  
+</body>
+</html>
